@@ -46,6 +46,7 @@
 
 #include <google/protobuf/port_def.inc>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -367,3 +368,4 @@ const char* UnknownFieldParse(uint32 tag, InternalMetadataWithArena* metadata,
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

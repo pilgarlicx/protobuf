@@ -45,6 +45,7 @@
 #error "You cannot SWIG proto headers"
 #endif
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace internal {
@@ -74,5 +75,6 @@ class InternalMetadataWithArena
 }  // namespace internal
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #endif  // GOOGLE_PROTOBUF_METADATA_H__

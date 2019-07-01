@@ -54,6 +54,7 @@
 
 #define GOOGLE_PROTOBUF_HAS_ONEOF
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace internal {
@@ -2410,3 +2411,4 @@ void UnknownFieldSetSerializer(const uint8* base, uint32 offset, uint32 tag,
 }  // namespace internal
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

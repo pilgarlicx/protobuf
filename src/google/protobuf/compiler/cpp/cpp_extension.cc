@@ -41,6 +41,7 @@
 
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -182,3 +183,4 @@ void ExtensionGenerator::GenerateDefinition(io::Printer* printer) {
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

@@ -52,6 +52,7 @@
 #include <google/protobuf/stubs/casts.h>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace util {
@@ -764,7 +765,7 @@ INSTANTIATE_TEST_SUITE_P(DifferentTypeInfoSourceTest,
 // }
 TEST_P(ProtostreamObjectSourceAnysTest, BasicAny) {
   AnyOut out;
-  ::google::protobuf::Any* any = out.mutable_any();
+  ::unity::google::protobuf::Any* any = out.mutable_any();
 
   AnyM m;
   m.set_foo("foovalue");
@@ -783,7 +784,7 @@ TEST_P(ProtostreamObjectSourceAnysTest, BasicAny) {
 
 TEST_P(ProtostreamObjectSourceAnysTest, LowerCamelEnumOutputSnakeCase) {
   AnyOut out;
-  ::google::protobuf::Any* any = out.mutable_any();
+  ::unity::google::protobuf::Any* any = out.mutable_any();
 
   Book book;
   book.set_type(Book::arts_and_photography);
@@ -804,7 +805,7 @@ TEST_P(ProtostreamObjectSourceAnysTest, LowerCamelEnumOutputSnakeCase) {
 
 TEST_P(ProtostreamObjectSourceAnysTest, UseIntsForEnumsTest) {
   AnyOut out;
-  ::google::protobuf::Any* any = out.mutable_any();
+  ::unity::google::protobuf::Any* any = out.mutable_any();
 
   Book book;
   book.set_type(Book::ACTION_AND_ADVENTURE);
@@ -825,7 +826,7 @@ TEST_P(ProtostreamObjectSourceAnysTest, UseIntsForEnumsTest) {
 
 TEST_P(ProtostreamObjectSourceAnysTest, UsePreserveProtoFieldNames) {
   AnyOut out;
-  ::google::protobuf::Any* any = out.mutable_any();
+  ::unity::google::protobuf::Any* any = out.mutable_any();
 
   Book book;
   book.set_snake_field("foo");
@@ -846,10 +847,10 @@ TEST_P(ProtostreamObjectSourceAnysTest, UsePreserveProtoFieldNames) {
 
 TEST_P(ProtostreamObjectSourceAnysTest, RecursiveAny) {
   AnyOut out;
-  ::google::protobuf::Any* any = out.mutable_any();
+  ::unity::google::protobuf::Any* any = out.mutable_any();
   any->set_type_url("type.googleapis.com/google.protobuf.Any");
 
-  ::google::protobuf::Any nested_any;
+  ::unity::google::protobuf::Any nested_any;
   nested_any.set_type_url(
       "type.googleapis.com/proto_util_converter.testing.AnyM");
 
@@ -875,13 +876,13 @@ TEST_P(ProtostreamObjectSourceAnysTest, RecursiveAny) {
 
 TEST_P(ProtostreamObjectSourceAnysTest, DoubleRecursiveAny) {
   AnyOut out;
-  ::google::protobuf::Any* any = out.mutable_any();
+  ::unity::google::protobuf::Any* any = out.mutable_any();
   any->set_type_url("type.googleapis.com/google.protobuf.Any");
 
-  ::google::protobuf::Any nested_any;
+  ::unity::google::protobuf::Any nested_any;
   nested_any.set_type_url("type.googleapis.com/google.protobuf.Any");
 
-  ::google::protobuf::Any second_nested_any;
+  ::unity::google::protobuf::Any second_nested_any;
   second_nested_any.set_type_url(
       "type.googleapis.com/proto_util_converter.testing.AnyM");
 
@@ -932,7 +933,7 @@ TEST_P(ProtostreamObjectSourceAnysTest, EmptyWithTypeAndNoValueOutputsType) {
 
 TEST_P(ProtostreamObjectSourceAnysTest, MissingTypeUrlError) {
   AnyOut out;
-  ::google::protobuf::Any* any = out.mutable_any();
+  ::unity::google::protobuf::Any* any = out.mutable_any();
 
   AnyM m;
   m.set_foo("foovalue");
@@ -947,7 +948,7 @@ TEST_P(ProtostreamObjectSourceAnysTest, MissingTypeUrlError) {
 
 TEST_P(ProtostreamObjectSourceAnysTest, UnknownTypeServiceError) {
   AnyOut out;
-  ::google::protobuf::Any* any = out.mutable_any();
+  ::unity::google::protobuf::Any* any = out.mutable_any();
   any->set_type_url("foo.googleapis.com/my.own.Type");
 
   AnyM m;
@@ -963,7 +964,7 @@ TEST_P(ProtostreamObjectSourceAnysTest, UnknownTypeServiceError) {
 
 TEST_P(ProtostreamObjectSourceAnysTest, UnknownTypeError) {
   AnyOut out;
-  ::google::protobuf::Any* any = out.mutable_any();
+  ::unity::google::protobuf::Any* any = out.mutable_any();
   any->set_type_url("type.googleapis.com/unknown.Type");
 
   AnyM m;
@@ -1041,7 +1042,7 @@ TEST_P(ProtostreamObjectSourceFieldMaskTest, FieldMaskRenderSuccess) {
   out.set_id("1");
   out.mutable_single_mask()->add_paths("path1");
   out.mutable_single_mask()->add_paths("snake_case_path2");
-  ::google::protobuf::FieldMask* mask = out.add_repeated_mask();
+  ::unity::google::protobuf::FieldMask* mask = out.add_repeated_mask();
   mask->add_paths("path3");
   mask = out.add_repeated_mask();
   mask->add_paths("snake_case_path4");
@@ -1161,3 +1162,4 @@ TEST_P(ProtostreamObjectSourceTimestampTest, TimestampDurationDefaultValue) {
 }  // namespace util
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

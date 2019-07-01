@@ -57,6 +57,7 @@
 
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -1441,3 +1442,4 @@ void ImmutableMessageGenerator::GenerateAnyMethods(io::Printer* printer) {
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

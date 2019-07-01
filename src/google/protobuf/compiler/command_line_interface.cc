@@ -86,6 +86,7 @@
 
 #include <google/protobuf/port_def.inc>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -751,7 +752,7 @@ CommandLineInterface::MemoryOutputStream::~MemoryOutputStream() {
 
       // Now copy in the data.
       std::string::size_type data_pos = 0;
-      char* target_ptr = ::google::protobuf::string_as_array(target) + pos;
+      char* target_ptr = ::unity::google::protobuf::string_as_array(target) + pos;
       while (data_pos < data_.size()) {
         // Copy indent.
         memcpy(target_ptr, indent_.data(), indent_.size());
@@ -768,7 +769,7 @@ CommandLineInterface::MemoryOutputStream::~MemoryOutputStream() {
       }
 
       GOOGLE_CHECK_EQ(target_ptr,
-               ::google::protobuf::string_as_array(target) + pos + data_.size() + indent_size);
+               ::unity::google::protobuf::string_as_array(target) + pos + data_.size() + indent_size);
     }
   }
 }
@@ -2361,3 +2362,4 @@ void CommandLineInterface::PrintFreeFieldNumbers(const Descriptor* descriptor) {
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

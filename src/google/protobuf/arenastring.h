@@ -49,6 +49,7 @@
 // implementation that knew more about ::std::string's internals could integrate more
 // closely with the arena allocator.
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace internal {
@@ -401,6 +402,7 @@ inline void ArenaStringPtr::AssignWithDefault(const ::std::string* default_value
 }  // namespace internal
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #include <google/protobuf/port_undef.inc>
 

@@ -132,6 +132,7 @@
 #error "You cannot SWIG proto headers"
 #endif
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -1236,6 +1237,7 @@ inline RepeatedPtrField<PB>* Reflection::MutableRepeatedPtrField(
 }
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #include <google/protobuf/port_undef.inc>
 

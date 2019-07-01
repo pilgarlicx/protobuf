@@ -59,6 +59,7 @@
 #include <ctype.h>
 #endif
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -508,3 +509,4 @@ io::ZeroCopyInputStream* DiskSourceTree::OpenDiskFile(
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

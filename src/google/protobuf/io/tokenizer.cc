@@ -97,6 +97,7 @@
 #include <google/protobuf/stubs/strutil.h>
 #include <google/protobuf/stubs/stl_util.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace io {
@@ -1129,3 +1130,4 @@ bool Tokenizer::IsIdentifier(const std::string& text) {
 }  // namespace io
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

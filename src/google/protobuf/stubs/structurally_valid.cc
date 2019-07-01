@@ -34,6 +34,7 @@
 
 #include <google/protobuf/stubs/stringpiece.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace internal {
@@ -615,3 +616,4 @@ char* UTF8CoerceToStructurallyValid(const StringPiece& src_str,
 }  // namespace internal
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

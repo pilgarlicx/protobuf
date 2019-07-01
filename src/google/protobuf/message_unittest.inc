@@ -63,6 +63,7 @@
 
 #include <google/protobuf/io/io_win32.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -633,3 +634,4 @@ TEST(MESSAGE_TEST_NAME, MOMIParserEdgeCases) {
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

@@ -41,6 +41,7 @@
 
 #include <google/protobuf/port_def.inc>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace util {
@@ -192,7 +193,7 @@ class PROTOBUF_EXPORT DataPiece {
   // Data type for this piece of data.
   Type type_;
 
-  typedef ::google::protobuf::internal::StringPiecePod StringPiecePod;
+  typedef ::unity::google::protobuf::internal::StringPiecePod StringPiecePod;
 
   // Stored piece of data.
   union {
@@ -214,6 +215,7 @@ class PROTOBUF_EXPORT DataPiece {
 }  // namespace util
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #include <google/protobuf/port_undef.inc>
 

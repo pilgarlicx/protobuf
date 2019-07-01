@@ -53,6 +53,7 @@
 
 #include <google/protobuf/port_def.inc>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -1476,3 +1477,4 @@ void FileGenerator::GenerateProto2NamespaceEnumSpecializations(
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

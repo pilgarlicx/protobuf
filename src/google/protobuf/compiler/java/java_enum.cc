@@ -45,6 +45,7 @@
 #include <google/protobuf/stubs/strutil.h>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -352,3 +353,4 @@ bool EnumGenerator::CanUseEnumValues() {
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

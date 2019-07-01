@@ -56,6 +56,7 @@
 #include <sstream>
 #include <string>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace io {
@@ -449,6 +450,7 @@ TEST_F(IoWin32Test, Utf8Utf16ConversionTest) {
 }  // namespace io
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #endif  // defined(_WIN32)
 

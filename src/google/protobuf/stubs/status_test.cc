@@ -34,6 +34,7 @@
 #include <google/protobuf/testing/googletest.h>
 #include <gtest/gtest.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace {
@@ -136,3 +137,4 @@ TEST(Status, EqualsDifferentMessage) {
 }  // namespace
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

@@ -41,6 +41,7 @@
 #include <google/protobuf/stubs/status.h>
 #include <google/protobuf/stubs/statusor.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace util {
@@ -179,3 +180,4 @@ TypeInfo* TypeInfo::NewTypeInfo(TypeResolver* type_resolver) {
 }  // namespace util
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

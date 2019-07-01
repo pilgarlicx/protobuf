@@ -54,6 +54,7 @@
 #include <google/protobuf/stubs/substitute.h>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -147,3 +148,4 @@ void MessageBuilderLiteGenerator::GenerateCommonBuilderMethods(
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

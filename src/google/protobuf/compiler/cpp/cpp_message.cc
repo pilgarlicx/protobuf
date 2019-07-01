@@ -60,6 +60,7 @@
 #include <google/protobuf/stubs/hash.h>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -4459,3 +4460,4 @@ void MessageGenerator::GenerateIsInitialized(io::Printer* printer) {
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

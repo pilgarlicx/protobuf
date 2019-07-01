@@ -38,6 +38,7 @@
 
 #include <google/protobuf/stubs/map_util.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -200,3 +201,4 @@ bool Context::HasGeneratedMethods(const Descriptor* descriptor) const {
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

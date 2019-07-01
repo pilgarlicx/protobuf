@@ -56,6 +56,7 @@
 
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -291,3 +292,4 @@ void PrintExtraFieldInfo(const std::map<std::string, std::string>& variables,
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

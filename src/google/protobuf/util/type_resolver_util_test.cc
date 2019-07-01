@@ -46,6 +46,7 @@
 #include <google/protobuf/testing/googletest.h>
 #include <gtest/gtest.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace util {
@@ -435,3 +436,4 @@ TEST_F(DescriptorPoolTypeResolverTest, TestJsonName) {
 }  // namespace util
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

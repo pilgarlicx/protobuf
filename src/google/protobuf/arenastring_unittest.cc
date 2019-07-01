@@ -45,6 +45,7 @@
 #include <gtest/gtest.h>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -134,3 +135,4 @@ TEST(ArenaStringPtrTest, ArenaStringPtrOnArenaNoSSO) {
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

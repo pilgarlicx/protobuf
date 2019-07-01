@@ -35,6 +35,7 @@
 #include <google/protobuf/util/internal/constants.h>
 #include <gtest/gtest.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace util {
@@ -188,3 +189,4 @@ TEST_P(DefaultValueObjectWriterSuppressListTest, Empty) {
 }  // namespace util
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

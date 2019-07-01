@@ -63,6 +63,7 @@
 
 #include <google/protobuf/port_def.inc>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -876,3 +877,4 @@ PROTOBUF_NOINLINE
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

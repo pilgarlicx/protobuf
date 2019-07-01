@@ -33,6 +33,7 @@
 
 #include <google/protobuf/map_unittest.pb.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -161,5 +162,6 @@ class MapReflectionTester {
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #endif  // GOOGLE_PROTOBUF_MAP_TEST_UTIL_H__

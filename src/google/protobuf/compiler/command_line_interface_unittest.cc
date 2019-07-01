@@ -64,6 +64,7 @@
 
 #include <google/protobuf/stubs/strutil.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -2438,3 +2439,4 @@ INSTANTIATE_TEST_SUITE_P(FileDescriptorSetSource, EncodeDecodeTest,
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

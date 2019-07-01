@@ -46,6 +46,7 @@
 #include <google/protobuf/stubs/mathlimits.h>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace util {
@@ -882,3 +883,4 @@ JsonStreamParser::TokenType JsonStreamParser::GetNextTokenType() {
 }  // namespace util
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

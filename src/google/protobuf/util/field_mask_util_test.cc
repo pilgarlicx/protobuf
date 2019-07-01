@@ -39,6 +39,7 @@
 #include <google/protobuf/unittest.pb.h>
 #include <gtest/gtest.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace util {
@@ -818,3 +819,4 @@ TEST(FieldMaskUtilTest, TrimMessageReturnValue) {
 }  // namespace util
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

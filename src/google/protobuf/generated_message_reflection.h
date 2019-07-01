@@ -64,6 +64,7 @@ class GMR_Handlers;
 }  // namespace google_opensource
 }  // namespace upb
 
+namespace unity {
 namespace google {
 namespace protobuf {
 class DescriptorPool;
@@ -71,8 +72,10 @@ class MapKey;
 class MapValueRef;
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace internal {
@@ -701,6 +704,7 @@ PROTOBUF_EXPORT void UnknownFieldSetSerializer(const uint8* base, uint32 offset,
 }  // namespace internal
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #include <google/protobuf/port_undef.inc>
 

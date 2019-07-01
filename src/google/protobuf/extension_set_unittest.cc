@@ -55,6 +55,7 @@
 #include <google/protobuf/stubs/stl_util.h>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace internal {
@@ -518,7 +519,7 @@ TEST(ExtensionSetTest, SerializationToArray) {
   int size = source.ByteSize();
   std::string data;
   data.resize(size);
-  uint8* target = reinterpret_cast<uint8*>(::google::protobuf::string_as_array(&data));
+  uint8* target = reinterpret_cast<uint8*>(::unity::google::protobuf::string_as_array(&data));
   uint8* end = source.SerializeWithCachedSizesToArray(target);
   EXPECT_EQ(size, end - target);
   EXPECT_TRUE(destination.ParseFromString(data));
@@ -540,7 +541,7 @@ TEST(ExtensionSetTest, SerializationToStream) {
   std::string data;
   data.resize(size);
   {
-    io::ArrayOutputStream array_stream(::google::protobuf::string_as_array(&data), size, 1);
+    io::ArrayOutputStream array_stream(::unity::google::protobuf::string_as_array(&data), size, 1);
     io::CodedOutputStream output_stream(&array_stream);
     source.SerializeWithCachedSizes(&output_stream);
     ASSERT_FALSE(output_stream.HadError());
@@ -562,7 +563,7 @@ TEST(ExtensionSetTest, PackedSerializationToArray) {
   int size = source.ByteSize();
   std::string data;
   data.resize(size);
-  uint8* target = reinterpret_cast<uint8*>(::google::protobuf::string_as_array(&data));
+  uint8* target = reinterpret_cast<uint8*>(::unity::google::protobuf::string_as_array(&data));
   uint8* end = source.SerializeWithCachedSizesToArray(target);
   EXPECT_EQ(size, end - target);
   EXPECT_TRUE(destination.ParseFromString(data));
@@ -584,7 +585,7 @@ TEST(ExtensionSetTest, PackedSerializationToStream) {
   std::string data;
   data.resize(size);
   {
-    io::ArrayOutputStream array_stream(::google::protobuf::string_as_array(&data), size, 1);
+    io::ArrayOutputStream array_stream(::unity::google::protobuf::string_as_array(&data), size, 1);
     io::CodedOutputStream output_stream(&array_stream);
     source.SerializeWithCachedSizes(&output_stream);
     ASSERT_FALSE(output_stream.HadError());
@@ -1324,3 +1325,4 @@ TEST(ExtensionSetTest, DynamicExtensions) {
 }  // namespace internal
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

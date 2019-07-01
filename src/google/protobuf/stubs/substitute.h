@@ -40,6 +40,7 @@
 
 #include <google/protobuf/port_def.inc>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace strings {
@@ -168,6 +169,7 @@ PROTOBUF_EXPORT void SubstituteAndAppend(
 }  // namespace strings
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #include <google/protobuf/port_undef.inc>
 

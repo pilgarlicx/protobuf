@@ -50,6 +50,7 @@
 #define PROTOBUF_EXPORT
 #endif
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -398,6 +399,7 @@ class PROTOBUF_EXPORT MergedDescriptorDatabase : public DescriptorDatabase {
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #include <google/protobuf/port_undef.inc>
 

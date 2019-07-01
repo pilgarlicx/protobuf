@@ -56,6 +56,7 @@
 
 const size_t kMapEntryTagByteSize = 2;
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace internal {
@@ -1358,3 +1359,4 @@ size_t WireFormat::MessageSetItemByteSize(const FieldDescriptor* field,
 }  // namespace internal
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

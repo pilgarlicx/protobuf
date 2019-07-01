@@ -35,6 +35,7 @@
 
 // This file contains constants used by //net/proto2/util/converter.
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace util {
@@ -96,4 +97,5 @@ const char kOptionJspbMessageId[] = "jspb.message_id";
 }  // namespace util
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 #endif  // GOOGLE_PROTOBUF_UTIL_CONVERTER_CONSTANTS_H__

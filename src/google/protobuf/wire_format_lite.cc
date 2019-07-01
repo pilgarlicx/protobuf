@@ -46,6 +46,7 @@
 #include <google/protobuf/port_def.inc>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace internal {
@@ -806,3 +807,4 @@ size_t WireFormatLite::SInt64Size(const RepeatedField<int64>& value) {
 }  // namespace internal
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

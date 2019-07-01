@@ -53,6 +53,7 @@
 
 #include <google/protobuf/stubs/stl_util.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace {
@@ -1931,3 +1932,4 @@ TEST_F(RepeatedFieldInsertionIteratorsTest, MoveProtos) {
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

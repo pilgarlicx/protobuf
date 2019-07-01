@@ -56,6 +56,7 @@
 // Always include as last one, otherwise it can break compilation
 #include <google/protobuf/port_def.inc>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -1590,7 +1591,7 @@ bool MessageDifferencer::MatchRepeatedFieldIndices(
       // doesn't necessarily imply Compare(b, c). Therefore a naive greedy
       // algorithm will fail to find a maximum matching.
       // Here we use the augmenting path algorithm.
-      MaximumMatcher::NodeMatchCallback* callback = ::google::protobuf::NewPermanentCallback(
+      MaximumMatcher::NodeMatchCallback* callback = ::unity::google::protobuf::NewPermanentCallback(
           this, &MessageDifferencer::IsMatch, repeated_field, key_comparator,
           &message1, &message2, parent_fields, nullptr);
       MaximumMatcher matcher(count1, count2, callback, match_list1,
@@ -1957,3 +1958,4 @@ MessageDifferencer::CreateMultipleFieldsMapKeyComparator(
 }  // namespace util
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

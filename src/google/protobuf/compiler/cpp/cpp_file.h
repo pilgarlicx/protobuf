@@ -46,6 +46,7 @@
 #include <google/protobuf/compiler/cpp/cpp_options.h>
 #include <google/protobuf/compiler/scc.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 class FileDescriptor;  // descriptor.h
@@ -54,7 +55,9 @@ class Printer;  // printer.h
 }
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -201,5 +204,6 @@ class FileGenerator {
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #endif  // GOOGLE_PROTOBUF_COMPILER_CPP_FILE_H__

@@ -74,6 +74,7 @@
 #endif
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -2163,6 +2164,7 @@ inline const FieldDescriptor* OneofDescriptor::field(int index) const {
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #include <google/protobuf/port_undef.inc>
 

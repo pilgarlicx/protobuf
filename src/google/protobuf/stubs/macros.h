@@ -33,6 +33,7 @@
 
 #include <google/protobuf/stubs/port.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -116,5 +117,6 @@ struct CompileAssert {
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #endif  // GOOGLE_PROTOBUF_MACROS_H__

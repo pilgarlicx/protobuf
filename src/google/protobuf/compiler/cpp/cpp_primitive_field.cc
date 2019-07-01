@@ -39,6 +39,7 @@
 #include <google/protobuf/stubs/strutil.h>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -514,3 +515,4 @@ void RepeatedPrimitiveFieldGenerator::GenerateByteSize(
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

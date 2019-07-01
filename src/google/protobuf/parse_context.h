@@ -47,6 +47,7 @@
 #include <google/protobuf/port_def.inc>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -753,6 +754,7 @@ PROTOBUF_EXPORT PROTOBUF_MUST_USE_RESULT const char* UnknownFieldParse(
 }  // namespace internal
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #include <google/protobuf/port_undef.inc>
 

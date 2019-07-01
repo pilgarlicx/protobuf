@@ -79,6 +79,7 @@ class GMR_Handlers;
 }  // namespace google_opensource
 }  // namespace upb
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -2662,6 +2663,7 @@ extern template class PROTOBUF_EXPORT RepeatedPtrField<std::string>;
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #include <google/protobuf/port_undef.inc>
 

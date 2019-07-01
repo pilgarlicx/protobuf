@@ -37,6 +37,7 @@
 #error "You cannot SWIG proto headers"
 #endif
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -47,5 +48,6 @@ struct is_proto_enum : ::std::false_type {};
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #endif  // GOOGLE_PROTOBUF_GENERATED_ENUM_UTIL_H__

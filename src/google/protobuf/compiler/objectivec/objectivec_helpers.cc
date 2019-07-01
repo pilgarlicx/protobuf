@@ -54,6 +54,7 @@
 // NOTE: src/google/protobuf/compiler/plugin.cc makes use of cerr for some
 // error cases, so it seems to be ok to use as a back door for errors.
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -63,7 +64,7 @@ namespace objectivec {
 // in this port namespace to avoid ambiguous definition.
 namespace posix {
 #ifdef _WIN32
-using ::google::protobuf::io::win32::open;
+using ::unity::google::protobuf::io::win32::open;
 #else
 using ::open;
 #endif
@@ -1740,3 +1741,4 @@ bool ImportWriter::ProtoFrameworkCollector::ConsumeLine(
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

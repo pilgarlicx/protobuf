@@ -35,6 +35,7 @@
 
 #include <google/protobuf/stubs/common.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -117,5 +118,6 @@ void STLDeleteValues(T *v) {
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #endif  // GOOGLE_PROTOBUF_STUBS_STL_UTIL_H__

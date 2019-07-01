@@ -41,6 +41,7 @@
 #include <google/protobuf/stubs/status.h>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace util {
@@ -889,3 +890,4 @@ TEST_F(JsonStreamParserTest, DeepNestJsonExceedLimit) {
 }  // namespace util
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

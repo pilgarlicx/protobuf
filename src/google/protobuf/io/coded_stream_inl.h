@@ -43,6 +43,7 @@
 #include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 #include <google/protobuf/stubs/stl_util.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace io {
@@ -87,4 +88,5 @@ inline bool CodedInputStream::InternalReadRawInline(void* buffer, int size) {
 }  // namespace io
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 #endif  // GOOGLE_PROTOBUF_IO_CODED_STREAM_INL_H__

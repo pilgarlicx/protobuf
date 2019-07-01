@@ -42,6 +42,7 @@
 // and the opensource version gtest.h header includes cmath transitively
 // somehow.
 #include <gtest/gtest.h>
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace util {
@@ -482,3 +483,4 @@ TEST_F(DefaultFieldComparatorTest, RepeatedFieldComparison) {
 }  // namespace util
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

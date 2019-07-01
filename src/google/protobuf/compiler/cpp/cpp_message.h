@@ -43,6 +43,7 @@
 #include <google/protobuf/compiler/cpp/cpp_message_layout_helper.h>
 #include <google/protobuf/compiler/cpp/cpp_options.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace io {
@@ -50,7 +51,9 @@ class Printer;  // printer.h
 }
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -219,5 +222,6 @@ class MessageGenerator {
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #endif  // GOOGLE_PROTOBUF_COMPILER_CPP_MESSAGE_H__

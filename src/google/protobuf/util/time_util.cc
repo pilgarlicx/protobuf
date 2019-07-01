@@ -41,6 +41,7 @@
 
 #include <google/protobuf/port_def.inc>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace util {
@@ -116,15 +117,15 @@ std::string FormatNanos(int32 nanos) {
 }
 
 std::string FormatTime(int64 seconds, int32 nanos) {
-  return ::google::protobuf::internal::FormatTime(seconds, nanos);
+  return ::unity::google::protobuf::internal::FormatTime(seconds, nanos);
 }
 
 bool ParseTime(const std::string& value, int64* seconds, int32* nanos) {
-  return ::google::protobuf::internal::ParseTime(value, seconds, nanos);
+  return ::unity::google::protobuf::internal::ParseTime(value, seconds, nanos);
 }
 
 void CurrentTime(int64* seconds, int32* nanos) {
-  return ::google::protobuf::internal::GetCurrentTime(seconds, nanos);
+  return ::unity::google::protobuf::internal::GetCurrentTime(seconds, nanos);
 }
 
 // Truncates the remainder part after division.
@@ -372,7 +373,9 @@ timeval TimeUtil::DurationToTimeval(const Duration& value) {
 }  // namespace util
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace {
@@ -507,3 +510,4 @@ Duration operator-(const Timestamp& t1, const Timestamp& t2) {
 }
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

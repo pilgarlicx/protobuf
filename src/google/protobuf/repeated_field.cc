@@ -40,6 +40,7 @@
 
 #include <google/protobuf/port_def.inc>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -132,3 +133,4 @@ template class PROTOBUF_EXPORT RepeatedPtrField<std::string>;
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

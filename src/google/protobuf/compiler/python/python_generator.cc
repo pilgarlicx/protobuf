@@ -66,6 +66,7 @@
 
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -1445,3 +1446,4 @@ void Generator::CopyPublicDependenciesAliases(
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

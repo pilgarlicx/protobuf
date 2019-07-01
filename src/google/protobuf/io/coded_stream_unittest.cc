@@ -57,6 +57,7 @@
 #define ULL(x) PROTOBUF_ULONGLONG(x)
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace io {
@@ -1379,3 +1380,4 @@ TEST_F(CodedStreamTest, InputOver2G) {
 }  // namespace io
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

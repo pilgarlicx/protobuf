@@ -58,6 +58,7 @@
 #include <google/protobuf/port_def.inc>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace internal {
@@ -826,3 +827,4 @@ void InitSCCImpl(SCCInfoBase* scc) {
 }  // namespace internal
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

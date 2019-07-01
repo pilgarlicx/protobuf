@@ -42,6 +42,7 @@
 #define snprintf _snprintf
 #endif
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace {
@@ -839,3 +840,4 @@ TEST(StrCat, Ints) {
 }  // anonymous namespace
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

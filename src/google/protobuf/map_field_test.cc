@@ -45,6 +45,7 @@
 #include <google/protobuf/repeated_field.h>
 #include <gtest/gtest.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -486,3 +487,4 @@ TEST_P(MapFieldStateTest, MutableMapField) {
 }  // namespace internal
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

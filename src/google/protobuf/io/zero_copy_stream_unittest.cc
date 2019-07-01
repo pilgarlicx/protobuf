@@ -74,6 +74,7 @@
 #include <google/protobuf/testing/googletest.h>
 #include <gtest/gtest.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace io {
@@ -999,3 +1000,4 @@ TEST(ZeroSizeArray, Output) {
 }  // namespace io
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

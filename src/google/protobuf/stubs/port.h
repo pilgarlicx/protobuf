@@ -129,6 +129,7 @@
 #define PROTOBUF_FINAL
 #endif
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -430,6 +431,7 @@ class BigEndian {
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #ifdef PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 #define GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER \

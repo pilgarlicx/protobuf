@@ -55,6 +55,7 @@
 
 #include <google/protobuf/port_def.inc>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace io {
@@ -398,6 +399,7 @@ inline std::pair<char*, bool> as_string_data(std::string* s) {
 }  // namespace io
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #include <google/protobuf/port_undef.inc>
 

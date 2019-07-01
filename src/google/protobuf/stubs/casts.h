@@ -35,6 +35,7 @@
 
 #include <google/protobuf/stubs/common.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace internal {
@@ -131,4 +132,5 @@ using internal::bit_cast;
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 #endif  // GOOGLE_PROTOBUF_CASTS_H__

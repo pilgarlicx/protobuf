@@ -38,6 +38,7 @@
 #include <gtest/gtest.h>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -1967,3 +1968,4 @@ void TestUtilLite::ExpectPackedExtensionsModified(
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

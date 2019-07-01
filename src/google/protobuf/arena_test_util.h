@@ -37,6 +37,7 @@
 #include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 #include <google/protobuf/arena.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -95,5 +96,6 @@ class NoHeapChecker {
 }  // namespace internal
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #endif  // GOOGLE_PROTOBUF_ARENA_TEST_UTIL_H__

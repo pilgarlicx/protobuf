@@ -35,6 +35,7 @@
 #include <google/protobuf/stubs/strutil.h>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -210,7 +211,7 @@ void MapFieldGenerator::GenerateMergeFromCodedStream(
       format(
           "  unknown_fields_stream.WriteVarint32($tag$u);\n"
           "  unknown_fields_stream.WriteVarint32(\n"
-          "      static_cast< ::google::protobuf::uint32>(data.size()));\n"
+          "      static_cast< ::unity::google::protobuf::uint32>(data.size()));\n"
           "  unknown_fields_stream.WriteString(data);\n");
     }
     format("}\n");
@@ -380,3 +381,4 @@ void MapFieldGenerator::GenerateByteSize(io::Printer* printer) const {
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

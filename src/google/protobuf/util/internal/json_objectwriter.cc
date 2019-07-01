@@ -41,6 +41,7 @@
 #include <google/protobuf/stubs/strutil.h>
 #include <google/protobuf/stubs/mathlimits.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace util {
@@ -192,3 +193,4 @@ void JsonObjectWriter::WritePrefix(StringPiece name) {
 }  // namespace util
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

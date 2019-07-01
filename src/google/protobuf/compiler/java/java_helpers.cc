@@ -49,6 +49,7 @@
 
 #include <google/protobuf/stubs/hash.h>  // for hash<T *>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -1025,3 +1026,4 @@ void EscapeUtf16ToString(uint16 code, std::string* output) {
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

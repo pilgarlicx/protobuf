@@ -82,6 +82,7 @@
 #include <google/protobuf/repeated_field.h>
 #include <google/protobuf/wire_format.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -875,3 +876,4 @@ void DynamicMessageFactory::DeleteDefaultOneofInstance(
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

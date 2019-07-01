@@ -47,6 +47,7 @@
 #include <google/protobuf/stubs/strutil.h>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -631,3 +632,4 @@ std::string RepeatedImmutablePrimitiveFieldLiteGenerator::GetBoxedType() const {
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

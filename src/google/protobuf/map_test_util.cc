@@ -33,6 +33,7 @@
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/message.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -1802,3 +1803,4 @@ void MapReflectionTester::ExpectMapEntryClearViaReflection(Message* message) {
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

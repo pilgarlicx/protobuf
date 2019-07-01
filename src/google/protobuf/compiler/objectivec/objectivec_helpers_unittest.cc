@@ -32,6 +32,7 @@
 #include <google/protobuf/testing/googletest.h>
 #include <gtest/gtest.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -255,3 +256,4 @@ TEST(ObjCHelperDeathTest, TextFormatDecodeData_Failures) {
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

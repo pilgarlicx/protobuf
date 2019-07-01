@@ -58,6 +58,7 @@
 #include <gtest/gtest.h>
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace util {
@@ -1859,10 +1860,10 @@ TEST_P(ProtoStreamObjectWriterAnyTest, AnyRenderSuccess) {
 
 TEST_P(ProtoStreamObjectWriterAnyTest, RecursiveAny) {
   AnyOut out;
-  ::google::protobuf::Any* any = out.mutable_any();
+  ::unity::google::protobuf::Any* any = out.mutable_any();
   any->set_type_url("type.googleapis.com/google.protobuf.Any");
 
-  ::google::protobuf::Any nested_any;
+  ::unity::google::protobuf::Any nested_any;
   nested_any.set_type_url(
       "type.googleapis.com/proto_util_converter.testing.AnyM");
 
@@ -1887,13 +1888,13 @@ TEST_P(ProtoStreamObjectWriterAnyTest, RecursiveAny) {
 
 TEST_P(ProtoStreamObjectWriterAnyTest, DoubleRecursiveAny) {
   AnyOut out;
-  ::google::protobuf::Any* any = out.mutable_any();
+  ::unity::google::protobuf::Any* any = out.mutable_any();
   any->set_type_url("type.googleapis.com/google.protobuf.Any");
 
-  ::google::protobuf::Any nested_any;
+  ::unity::google::protobuf::Any nested_any;
   nested_any.set_type_url("type.googleapis.com/google.protobuf.Any");
 
-  ::google::protobuf::Any second_nested_any;
+  ::unity::google::protobuf::Any second_nested_any;
   second_nested_any.set_type_url(
       "type.googleapis.com/proto_util_converter.testing.AnyM");
 
@@ -1926,10 +1927,10 @@ TEST_P(ProtoStreamObjectWriterAnyTest, TypeUrlAtEnd) {
   book.set_length(1234);
   book.set_content("Hello World!");
 
-  ::google::protobuf::Any any;
+  ::unity::google::protobuf::Any any;
   any.PackFrom(book);
 
-  ::google::protobuf::Any outer_any;
+  ::unity::google::protobuf::Any outer_any;
   outer_any.PackFrom(any);
 
   AnyOut out;
@@ -1963,10 +1964,10 @@ TEST_P(ProtoStreamObjectWriterAnyTest, TypeUrlAtEndWithTemporaryStrings) {
   book.set_length(1234);
   book.set_content("Hello World!");
 
-  ::google::protobuf::Any any;
+  ::unity::google::protobuf::Any any;
   any.PackFrom(book);
 
-  ::google::protobuf::Any outer_any;
+  ::unity::google::protobuf::Any outer_any;
   outer_any.PackFrom(any);
 
   AnyOut out;
@@ -2156,9 +2157,9 @@ TEST_P(ProtoStreamObjectWriterAnyTest, AnyWellKnownTypeErrorTest) {
 // }
 TEST_P(ProtoStreamObjectWriterAnyTest, AnyWithNestedPrimitiveValue) {
   AnyOut out;
-  ::google::protobuf::Any* any = out.mutable_any();
+  ::unity::google::protobuf::Any* any = out.mutable_any();
 
-  ::google::protobuf::Value value;
+  ::unity::google::protobuf::Value value;
   value.set_string_value("abc");
   any->PackFrom(value);
 
@@ -2183,9 +2184,9 @@ TEST_P(ProtoStreamObjectWriterAnyTest, AnyWithNestedPrimitiveValue) {
 // }
 TEST_P(ProtoStreamObjectWriterAnyTest, AnyWithNestedObjectValue) {
   AnyOut out;
-  ::google::protobuf::Any* any = out.mutable_any();
+  ::unity::google::protobuf::Any* any = out.mutable_any();
 
-  ::google::protobuf::Value value;
+  ::unity::google::protobuf::Value value;
   (*value.mutable_struct_value()->mutable_fields())["foo"].set_string_value(
       "abc");
   any->PackFrom(value);
@@ -2211,9 +2212,9 @@ TEST_P(ProtoStreamObjectWriterAnyTest, AnyWithNestedObjectValue) {
 // }
 TEST_P(ProtoStreamObjectWriterAnyTest, AnyWithNestedArrayValue) {
   AnyOut out;
-  ::google::protobuf::Any* any = out.mutable_any();
+  ::unity::google::protobuf::Any* any = out.mutable_any();
 
-  ::google::protobuf::Value value;
+  ::unity::google::protobuf::Value value;
   value.mutable_list_value()->add_values()->set_string_value("hello");
   any->PackFrom(value);
 
@@ -2935,3 +2936,4 @@ TEST_P(ProtoStreamObjectWriterOneOfsTest,
 }  // namespace util
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

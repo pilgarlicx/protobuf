@@ -73,6 +73,7 @@ const int kFieldSetter = 1;
 const int kFieldGetter = 2;
 const int kFieldProperty = 3;
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -1724,3 +1725,4 @@ bool Generator::Generate(const FileDescriptor* file, const string& parameter,
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity

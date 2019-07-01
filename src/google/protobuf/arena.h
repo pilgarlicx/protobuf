@@ -60,6 +60,7 @@ using type_info = ::type_info;
 #error "You cannot SWIG proto headers"
 #endif
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -67,8 +68,10 @@ struct ArenaOptions;  // defined below
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 
+namespace unity {
 namespace google {
 namespace protobuf {
 
@@ -722,6 +725,7 @@ class PROTOBUF_EXPORT Arena final {
 
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
 
 #include <google/protobuf/port_undef.inc>
 

@@ -48,6 +48,7 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/stubs/substitute.h>
 
+namespace unity {
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -471,3 +472,4 @@ bool Subprocess::Communicate(const Message& input, Message* output,
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+}  // namespace unity
