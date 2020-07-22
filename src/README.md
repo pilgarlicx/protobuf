@@ -178,6 +178,20 @@ Compile using the IBM xlC C++ compiler as follows:
 
 Also, you will need to use GNU `make` (`gmake`) instead of AIX `make`.
 
+**Note about Unity extra build options *[Unity Fork Specific]***
+
+To assist compiling with Unity's internal automated build system, invoke the following with `configure`:
+
+    ./configure UNITY_TARGET=linux_x86_64
+
+`UNITY_TARGET` provides a shortcut to add long complicated commands known to work with Unity's build system for these platforms:
+
+* Ubuntu Linux with `linux_x86_64`
+* macOS 10.12 with `macos_x86_64`
+* macOS for Apple Silicon with `macos_arm64`
+
+Setting `UNITY_TARGET` with `configure` will overwrite `UNITY_OPT_FLAG`. Setting an unsupported target will emit an error. Most of the time, only `UNITY_TARGET` is needed, but `UNITY_OPT_FLAG` can be used directly or in conjunction with `CXX_FLAGS`.
+
 C++ Installation - Windows
 --------------------------
 

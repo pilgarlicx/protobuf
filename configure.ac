@@ -36,6 +36,13 @@ case "$DIST_LANG" in
 esac
 AC_SUBST(DIST_LANG)
 
+AC_ARG_VAR(UNITY_TARGET, [(i.e)., make dist)])
+case "$UNITY_TARGET" in
+  "") ;;
+  linux_x86_64 | macos_x86_64 | macos_arm64) ;;
+  *) AC_MSG_FAILURE([unknown Unity target: $UNITY_TARGET]) ;;
+esac
+
 # autoconf's default CXXFLAGS are usually "-g -O2".  These aren't necessarily
 # the best choice for libprotobuf.
 AS_IF([test "x${ac_cv_env_CFLAGS_set}" = "x"],
@@ -88,25 +95,26 @@ AS_IF([test "x${ac_cv_env_CXXFLAGS_set}" = "x"],[
   # Protocol Buffers contains several checks that are intended to be used only
   # for debugging and which might hurt performance.  Most users are probably
   # end users who don't want these checks, so add -DNDEBUG by default.
-  case "${host_os}" in
-    linux*)
-      CXXFLAGS="$CXXFLAGS -std=c++11 -DNDEBUG -fPIC --sysroot=../unity/PlatformDependent/Linux/External/NonRedistributable/gcc-4.8.5/builds/x86_64-ubuntu14.04-linux-gnu/sysroot"
+  case "${UNITY_TARGET}" in
+    linux_x86_64)
+      UNITY_OPT_FLAG="-fPIC --sysroot=../unity/PlatformDependent/Linux/External/NonRedistributable/gcc-4.8.5/builds/x86_64-ubuntu14.04-linux-gnu/sysroot"
         ;;
-    darwin*)
-      CXXFLAGS="$CXXFLAGS -std=c++11 -DNDEBUG -mmacosx-version-min=10.9"
+    macos_x86_64)
+      UNITY_OPT_FLAG="-arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.12"
         ;;
-    *)
-        AC_MSG_ERROR(["OS $host_os is not supported"])
+    macos_arm64)
+      UNITY_OPT_FLAG="-arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=11.0"
         ;;
   esac
-  # CXXFLAGS="$CXXFLAGS -std=c++11 -DNDEBUG"
+  CXXFLAGS="$CXXFLAGS -std=c++11 -DNDEBUG"
 
-  AC_MSG_RESULT([use default: $PROTOBUF_OPT_FLAG $CXXFLAGS])
+  AC_MSG_RESULT([use default: $PROTOBUF_OPT_FLAG $CXXFLAGS $UNITY_OPT_FLAG])
 ],[
   AC_MSG_RESULT([use user-supplied: $CXXFLAGS])
 ])
 
 AC_SUBST(PROTOBUF_OPT_FLAG)
+AC_SUBST(UNITY_OPT_FLAG)
 
 ACX_CHECK_SUNCC
 
