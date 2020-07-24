@@ -1,4 +1,4 @@
-name: Build protobuf - macOS arm64 10.12
+name: Build protobuf - macOS arm64 11.0
 
 agent:
   type: Unity::VM::osx
