@@ -1,0 +1,24 @@
+name: Build protobuf - macOS arm64 10.12
+
+agent:
+  type: Unity::VM::osx
+  image: sustained-engineering/scd-macos-test-environment:v0.2.5-570490
+  flavor: b1.medium
+
+artifacts:
+  build.zip:
+    paths:
+      - arm64/**
+
+commands:
+- brew install autoconf automake libtool
+- ./autogen.sh
+- ./configure UNITY_TARGET=macOS_arm64 --prefix=$PWD/arm64
+- make
+- make install
+- mkdir -p out/build/bin/macos/arm64
+- cp -R $PWD/arm64/bin/* out/build/bin/macos/arm64
+- mkdir -p out/build/lib/macos/arm64
+- cp -R $PWD/arm64/lib/* out/build/lib/macos/arm64
+- mkdir -p out/build/include
+- cp -R $PWD/arm64/include/* out/build/include
