@@ -13,7 +13,7 @@ artifacts:
 commands:
 - brew install autoconf automake libtool
 - ./autogen.sh
-- ./configure UNITY_TARGET=macOS_arm64 --prefix=$PWD/arm64
+- ./configure UNITY_TARGET=macos_arm64 --prefix=$PWD/arm64
 - make
 - make install
 - mkdir -p out/build/bin/macos/arm64
