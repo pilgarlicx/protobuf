@@ -6,7 +6,7 @@ agent:
   flavor: b1.medium
 
 artifacts:
-  build.zip:
+  build:
     paths:
       - out/**
 
