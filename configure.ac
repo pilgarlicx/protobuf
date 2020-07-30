@@ -97,7 +97,7 @@ AS_IF([test "x${ac_cv_env_CXXFLAGS_set}" = "x"],[
   # end users who don't want these checks, so add -DNDEBUG by default.
   case "${UNITY_TARGET}" in
     linux_x86_64)
-      UNITY_OPT_FLAG="-fPIC --sysroot=../unity/PlatformDependent/Linux/External/NonRedistributable/gcc-4.8.5/builds/x86_64-ubuntu14.04-linux-gnu/sysroot"
+      UNITY_OPT_FLAG="-fPIC"
         ;;
     macos_x86_64)
       UNITY_OPT_FLAG="-arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.12"
