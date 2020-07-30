@@ -1,0 +1,23 @@
+name: Build protobuf - Linux x64 Ubuntu 16.04
+
+agent:
+  type: Unity::VM
+  image: desktop/ubuntu-1604-clang:latest
+  flavor: b1.small
+
+artifacts:
+  build:
+    paths:
+      - out/**
+
+commands:
+- ./autogen.sh
+- ./configure UNITY_TARGET=linux_x86_64 --prefix=$PWD/linux
+- make
+- make install
+- mkdir -p out/build/bin/linux
+- cp -R $PWD/linux/bin/* out/build/bin/linux
+- mkdir -p out/build/lib/linux
+- cp -R $PWD/linux/lib/* out/build/lib/linux
+- mkdir -p out/build/include
+- cp -R $PWD/linux/include/* out/build/include
