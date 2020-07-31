@@ -1,0 +1,22 @@
+name: Build protobuf - Windows 10 x64
+
+agent:
+  type: Unity::VM
+  image: slough-ops/win10-base:1803-v0.3.3-439452
+  flavor: b1.medium
+
+artifacts:
+  build:
+    paths:
+      - install/**
+
+commands:
+  - mkdir install
+  - cd cmake
+  - mkdir build
+  - cd build
+  - mkdir release
+  - cd release
+  - cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../../../../install ../..
+  - cd ..
+  - nmake
