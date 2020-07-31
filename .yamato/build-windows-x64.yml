@@ -11,12 +11,13 @@ artifacts:
       - install/**
 
 commands:
-  - mkdir install
-  - cd cmake
-  - mkdir build
-  - cd build
-  - mkdir release
-  - cd release
-  - cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../../../../install ../..
-  - cd ..
-  - nmake
+  -  |
+    mkdir install
+    cd cmake
+    mkdir build
+    cd build
+    mkdir release
+    cd release
+    cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../../../../install ../..
+    cd ..
+    nmake
