@@ -8,11 +8,11 @@ agent:
 artifacts:
   build:
     paths:
-      - install/**
+      - out/**
 
 commands:
-  -  |
-    "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvars64.bat"
+  - |
+    SetupVS.bat
     mkdir install
     cd cmake
     mkdir build
@@ -22,3 +22,7 @@ commands:
     cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../../../../install ../..
     nmake
     nmake install
+  - |
+    xcopy install\bin out\build\bin\win64 /s /i
+    xcopy install\lib out\build\lib\win64 /s /i
+    xcopy install\include out\build\include /s /i
