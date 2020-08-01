@@ -10,5 +10,12 @@ cd build
 mkdir release
 cd release
 cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../../../../install ../..
+
 nmake
+
 nmake install
+
+cd ..\..\..
+xcopy install\bin out\build\bin\win64 /s /i
+xcopy install\lib out\build\lib\win64 /s /i
+xcopy install\include out\build\include /s /i
