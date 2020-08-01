@@ -12,9 +12,9 @@ artifacts:
 
 commands:
   - |
-    SetupVS.bat
     mkdir install
     cd cmake
+    SetupVS.bat
     mkdir build
     cd build
     mkdir release
