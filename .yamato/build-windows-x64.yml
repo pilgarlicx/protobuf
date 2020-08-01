@@ -12,6 +12,9 @@ artifacts:
 
 commands:
   - |
-    mkdir install
     cd cmake
     BuildProtobufOnYamatoWithCMake.bat
+  - |
+    xcopy install\bin out\build\bin\win64 /s /i
+    xcopy install\lib out\build\lib\win64 /s /i
+    xcopy install\include out\build\include /s /i
